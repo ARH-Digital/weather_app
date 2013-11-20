@@ -1,0 +1,46 @@
+/* 
+    Created on : 07/11/2013, 5:56:43 PM
+    Author     : Aaron
+*/
+
+.ui-title{
+    margin: 0.6em 10% !important;
+}
+
+.ui-link-inherit {
+     white-space: pre-wrap !important;
+}
+
+.contentBox{
+    background-color: #9CCEF0;
+}
+
+.contentBox h1,
+.contentBox h2,
+.contentBox h3,
+.contentBox h4,
+.contentBox h5,
+.contentBox h6 {
+    text-align: center;
+}
+
+.spacer{
+    height: 2em;
+}
+
+.ui-btn-text {
+     white-space: pre-wrap !important;
+}
+
+.gpsLocation,.gpsTemp,
+.gpsTime,.gpsMax,
+.gpsMin,.gpsSunrise,
+.gpsSunset,.gpswindDir,
+.gpswindSpd,.gpsCond{
+    /* Defined here to remove warnings on IDE. */
+}
+
+.tempUnits, .speedUnit{
+    /* Defined here to remove warnings on IDE. */
+    /* Class is for future use of user controls Imperial / Metic data */
+}
