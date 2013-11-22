@@ -13,6 +13,7 @@
 
 .contentBox{
     background-color: #9CCEF0;
+    padding-bottom: 0.5em;
 }
 
 .contentBox h1,
@@ -32,6 +33,12 @@
      white-space: pre-wrap !important;
 }
 
+.iconSize{
+    width: 2em;
+    display: block;
+    margin: auto;
+}
+
 .gpsLocation,.gpsTemp,
 .gpsTime,.gpsMax,
 .gpsMin,.gpsSunrise,
@@ -43,4 +50,14 @@
 .tempUnits, .speedUnit{
     /* Defined here to remove warnings on IDE. */
     /* Class is for future use of user controls Imperial / Metic data */
+}
+
+
+.ui-slider-switch,
+.ui slider{ 
+    width: 100% !important;
+}
+
+.footerBtn{
+    width: 100% !important;
 }

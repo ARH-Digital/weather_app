@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Weather Here and Now</title>
@@ -38,14 +34,31 @@ and open the template in the editor.
                 </ul>
             </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
+        
+        
+        <!-- About Us Dialog page -->
+        <section data-role="page" id="dialogPage">
+            <div data-role="header" data-theme="b">
+            <h2>About Us</h2>
+            </div>
+            <div data-role="content" data-theme="b">
+                <p>This mobile Website is been developed as an assessment piece. It has been built using JQuery and JQuery mobile. All images are from either <br>www.iconearchive.com or <br> http://umutavci.deviantart.com/art/<br>weather-icon-set-165476034 </p>
+                <p>The weather data is sourced from openweathermaps.org</p>
+                <p>Built by Aaron Humphreys</p>
+                <a href="#contact" data-role="button">Contact Us</a>
+            </div>
+        </section>
+        
         
         <!-- AQUIRE GPS -->
         
         <section id="gps" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
@@ -54,14 +67,16 @@ and open the template in the editor.
                 <img src="ajax-loader.gif" alt="loading..." />
             </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
         
         <!-- GPS WEATHER -->
         
         <section id="gpsWeather" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
@@ -72,12 +87,18 @@ and open the template in the editor.
                     <h1><span class="gpsTemp">--</span>&#176;<span class="tempUnits">C</span></h1>
                     <h4><span class="gpsTime"></span></h4>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h5>Min Temp: <span class="gpsMin">--</span>&#176;<span class="tempUnits">C</span></h5></div>
-                        <div class="ui-block-b"><h5>Max Temp: <span class="gpsMax">--</span>&#176;<span class="tempUnits">C</span></h5></div>
-                        <div class="ui-block-c"><h5>Conditions: <span class="gpsCond">--</span><span class="icon"></span></h5></div>
-                        <div class="ui-block-a"><h5>Sunrise: <span class="gpsSunrise">--</span></h5></div>
-                        <div class="ui-block-b"><h5>Sunset: <span class="gpsSunset">--</span></h5></div>
-                        <div class="ui-block-c"><h5>Wind: <span class="gpswindSpd">--</span><span class="speedUnit">km/h</span> <span class="gpswindDir"></span></h5></div>
+                        <div class="ui-block-a"><h5>Min Temp:<br><span class="gpsMin">--</span>&#176;<span class="tempUnits">C</span></h5></div>
+                        <div class="ui-block-b"><h5>Max Temp:<br><span class="gpsMax">--</span>&#176;<span class="tempUnits">C</span></h5></div>
+                        <div class="ui-block-c"><h5>Conditions:<br><span class="gpsCond">--</span></h5></div>
+                        <div class="ui-block-a"><img src="media/freezing.png" alt="Min" class="iconSize" /></div>
+                        <div class="ui-block-b"><img src="media/hot01.png" alt="Min" class="iconSize" /></div>
+                        <div class="ui-block-c"><span class="icon"></span></div>
+                        <div class="ui-block-a"><h5>Sunrise:<br><span class="gpsSunrise">--</span></h5></div>
+                        <div class="ui-block-b"><h5>Sunset:<br><span class="gpsSunset">--</span></h5></div>
+                        <div class="ui-block-c"><h5>Wind:<br><span class="gpswindSpd">--</span><span class="speedUnit">km/h</span> <span class="gpswindDir"></span></h5></div>
+                        <div class="ui-block-a"><img src="media/Sunrise-icon.png" alt="Sunrise" class="iconSize" /></div>
+                        <div class="ui-block-b"><img src="media/Sunset-icon.png" alt="Min" class="iconSize" /></div>
+                        <div class="ui-block-c"><img src="media/Extras-Up-icon.png" alt="Direction" class="iconSize direction" /></div>
                     </div>
                 </div>
                 
@@ -87,10 +108,18 @@ and open the template in the editor.
                     <div class="ui-block-a">
                         <a href="#forecast" data-role="button">Click here for a 5 day forecast</a>
                     </div>
+                    <div class="ui-block-a flipper">
+                        <select name="flip-1" class="flip" data-role="slider">
+                            <option value="metric">Metric</option>
+                            <option value="imperial">Imperial</option>
+                        </select>
+                    </div>
                 </div>
             </div> 
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
         
         
@@ -98,7 +127,7 @@ and open the template in the editor.
         
         <section id="forecast" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
@@ -111,9 +140,9 @@ and open the template in the editor.
                             <div class="ui-block-a"><h4><span id="fore1">Day1</span></h4></div>
                     </div>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h4>Max: <span id="max1">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-b"><h4>Min: <span id="min1">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-c"><h4>Conditions: <span id="cond1">--</span></h4></div>
+                        <div class="ui-block-a"><h4>Min:<br><span id="min1">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-b"><h4>Max:<br><span id="max1">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-c"><h4>Conditions:<br><span id="cond1">--</span></h4></div>
                     </div>
                 </div>
                 
@@ -123,9 +152,9 @@ and open the template in the editor.
                         <div class="ui-block-a"><h4><span id="fore2">Day2</span></h4></div>
                     </div>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h4>Max: <span id="max2">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-b"><h4>Min: <span id="min2">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-c"><h4>Conditions: <span id="cond2">--</span></h4></div>
+                        <div class="ui-block-a"><h4>Min:<br><span id="min2">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-b"><h4>Max:<br><span id="max2">--</span>&#176;<span class="tempUnits">C</span></h4></div>                        
+                        <div class="ui-block-c"><h4>Conditions:<br><span id="cond2">--</span></h4></div>
                     </div>
                 </div>
                 
@@ -135,9 +164,9 @@ and open the template in the editor.
                         <div class="ui-block-a"><h4><span id="fore3">Day3</span></h4></div>
                     </div>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h4>Max: <span id="max3">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-b"><h4>Min: <span id="min3">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-c"><h4>Conditions: <span id="cond3">--</span></h4></div>
+                        <div class="ui-block-a"><h4>Min:<br><span id="min3">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-b"><h4>Max:<br><span id="max3">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-c"><h4>Conditions:<br><span id="cond3">--</span></h4></div>
                     </div>
                 </div>
                 
@@ -147,9 +176,9 @@ and open the template in the editor.
                         <div class="ui-block-a"><h4><span id="fore4">Day4</span></h4></div>
                     </div>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h4>Max: <span id="max4">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-b"><h4>Min: <span id="min4">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-c"><h4>Conditions: <span id="cond4">--</span></h4></div>
+                        <div class="ui-block-a"><h4>Min:<br><span id="min4">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-b"><h4>Max:<br><span id="max4">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-c"><h4>Conditions:<br><span id="cond4">--</span></h4></div>
                     </div>
                 </div>
                 
@@ -159,15 +188,22 @@ and open the template in the editor.
                         <div class="ui-block-a"><h4><span id="fore5">Day5</span></h4></div>
                     </div>
                     <div class="ui-grid-b">
-                        <div class="ui-block-a"><h4>Max: <span id="max5">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-b"><h4>Min: <span id="min5">--</span>&#176;<span class="tempUnits">C</span></h4></div>
-                        <div class="ui-block-c"><h4>Conditions: <span id="cond5">--</span></h4></div>
+                        <div class="ui-block-a"><h4>Min:<br><span id="min5">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-b"><h4>Max:<br><span id="max5">--</span>&#176;<span class="tempUnits">C</span></h4></div>
+                        <div class="ui-block-c"><h4>Conditions:<br><span id="cond5">--</span></h4></div>
                     </div>
                 </div>
                 
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <a href="#homepage" data-role="button" class="homeBtn">Return home</a>
+                    </div>
+                </div>
             </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
         
 
@@ -176,42 +212,61 @@ and open the template in the editor.
         
         <section id="address" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
             <div data-role="content">
-                <form method="get" action="#">
+                <form method="get" action="#" name="address">
                     
                     <label for="stNumber">Street Number:</label>
-                    <input type="text" name="stNumber" id="stNumber" value=""  data-mini="true" />
+                    <input type="text" name="stNumber" id="stNumber" value="" placeholder="16" data-mini="true" />
 
                     <label for="stName">Street Name:</label>
-                    <input type="text" name="stName" id="stName" value=""  data-mini="true" />
+                    <input type="text" name="stName" id="stName" value="" placeholder="Somewhere Street" data-mini="true" />
                     
                     <label for="suburb">Suburb:</label>
-                    <input type="text" name="suburb" id="suburb" value=""  data-mini="true" />
+                    <input type="text" name="suburb" id="suburb" value="" placeholder="Heresville" data-mini="true" />
                     
                     <label for="state">State:</label>
-                    <input type="text" name="state" id="state" value=""  data-mini="true" />
+                    <input type="text" name="state" id="state" value="" placeholder="Queensland or QLD" data-mini="true" />
                     
                     <label for="country">Country:</label>
-                    <input type="text" name="country" id="country" value=""  data-mini="true" />
+                    <input type="text" name="country" id="country" value="" placeholder="Australia or AU" data-mini="true" />
                     
                     <div data-role="controlgroup" data-type="horizontal">
                     <label for="reset" class="ui-hidden-accessible">Clear</label>
                     <input type="reset" name="reset" id="reset" value="Clear" data-icon="delete"/>
                     
                     <label for="submit" class="ui-hidden-accessible">Submit</label>
-                    <input type="submit" name="submit" id="submit" value="Submit" data-icon="check" data-iconpos="right" data-theme="b"/>
+                    <input type="button" name="submit" id="submit" value="Submit" data-icon="check" data-iconpos="right" data-theme="b"/>
                     </div>
                 </form>
             </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
         
          
+         <!-- AQUIRE GPS AND DATA -->
+        
+        <section id="addressLoad" data-role="page">
+            <div data-role="header" data-theme="b">
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
+                <h1>Weather Here and Now</h1>
+            </div>
+            
+            <div data-role="content">
+                <h3>Finding the weather for the location you specified</h3>
+                <img src="ajax-loader.gif" alt="loading..." />
+            </div>
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
+        </section>
          
         <!-- HISTORY SEARCH -->
         
@@ -219,7 +274,7 @@ and open the template in the editor.
         
         <section id="history" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
@@ -228,44 +283,53 @@ and open the template in the editor.
                 <img src="ajax-loader.gif" alt="loading..." />
             </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
         
-        <!-- HISTORY -->
-        
-        <section id="historyWeather" data-role="page">
+        <!-- Contact form -->
+        <section id="contact" data-role="page">
             <div data-role="header" data-theme="b">
-                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext">Home</a>
+                <a href="#homepage" data-icon="home" data-role="button" data-iconpos="notext" class="homeBtn">Home</a>
                 <h1>Weather Here and Now</h1>
             </div>
             
             <div data-role="content">
-                <div class="contentBox ui-corner-all" >
-                    <h3>Your current weather for <span class="gpsLocation">...</span></h3>
-                    <h2>Current Temp</h2>
-                    <h1><span class="gpsTemp">--</span>&#176;<span class="tempUnits">C</span></h1>
-                    <h4><span class="gpsTime"></span></h4>
-                    <div class="ui-grid-b">
-                        <div class="ui-block-a"><h5>Min Temp: <span class="gpsMin">--</span>&#176;<span class="tempUnits">C</span></h5></div>
-                        <div class="ui-block-b"><h5>Max Temp: <span class="gpsMax">--</span>&#176;<span class="tempUnits">C</span></h5></div>
-                        <div class="ui-block-c"><h5>Conditions: <span class="gpsCond">--</span><span class="icon"></span></h5></div>
-                        <div class="ui-block-a"><h5>Sunrise: <span class="gpsSunrise">--</span></h5></div>
-                        <div class="ui-block-b"><h5>Sunset: <span class="gpsSunset">--</span></h5></div>
-                        <div class="ui-block-c"><h5>Wind: <span class="gpswindSpd">--</span><span class="speedUnit">km/h</span> <span class="gpswindDir"></span></h5></div>
+                <form method="post" action="mailto:109020@student.sae.edu.au" name="feedbackForm">
+                    
+                    <label for="Name">Name:</label>
+                    <input type="text" name="Name" id="Name" value="" placeholder="First Last Names" data-mini="true" />
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="" placeholder="email@address.com"  data-mini="true" />
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" id="phone" placeholder="0476543210"  data-mini="true" />
+                    
+                    <label for="feedback">Feedback</label>
+                    <textarea name="feedback" id="feedback" placeholder="Please leave feedback here" data-mini="true" ></textarea>
+                    
+                    
+                    <div data-role="controlgroup" data-type="horizontal">
+                    <label for="reset" class="ui-hidden-accessible">Clear</label>
+                    <input type="reset" name="reset" id="resetForm" value="Clear" data-icon="delete"/>
+                    
+                    <label for="submit" class="ui-hidden-accessible">Submit</label>
+                    <input type="submit" name="submit" id="submitForm" value="Submit" data-icon="check" data-iconpos="right" data-theme="b"/>
                     </div>
+                </form>
+                <div data-role="popup" id="popup" data-theme="a">
+                    <div data-role="header" data-theme="b"><h4>Thank you</h4></div>
+                    <p>Thank you for taking the time to provide feedback on your experience. Your feedback will be reviewed. Thank you for your participation.<p>
                 </div>
-                
-                <div class="spacer"></div> <!-- Spacer adds whitespace for placement and ease of viewing -->
-                
-                <div class="ui-grid-solo">
-                    <div class="ui-block-a">
-                        <a href="#forecast" data-role="button">Click here for a 5 day forecast</a>
-                    </div>
-                </div>
-            </div> 
+            </div>
             
-            <div data-role="footer" data-position="fixed" data-theme="b"><h4>Footer</h4></div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <a href="#dialogPage" data-rel="dialog" class="footerBtn" >About Us</a>
+            </div>
         </section>
+        
         
         
         
